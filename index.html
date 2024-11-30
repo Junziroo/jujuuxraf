@@ -1,346 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jujuu x RAF - Social Media Links</title>
-    <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
-    <style>
-
-:root {
-   --black-color: #17181c;
-   --blue-color: #3e50b4;
-   --white-rbg-color: 255, 255, 255;
-   --green-rbg-color: 0, 212, 113;
-}
-
-        * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-    scroll-behavior: smooth;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: black;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    padding: 0 5%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-bottom: 50px;
-    z-index: 100;
-}
-
-.con-logo {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    text-decoration: none;
-}
-
-.con-logo i {
-  color: #00cc4b;
-  font-size: 2.5em;
-  text-shadow: 0 0px 5px #00cc4b,
-               0 0px 20px #00cc4b;
-}
-
-.con-logo h1 {
-  font-family: "Audiowide", sans-serif;
-  font-size: 2em;
-  color: white;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.con-1 {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-    height: max-content;
-    position: relative;
-}
-
-.typedtext {
-    border-right: 2px solid black;
-    animation: blinkTextCursor 800ms steps(44) infinite normal;
-    color: #ffffff;
-    text-shadow: 0 0px 5px white;
-    display: block;
-  }
-  
-  @keyframes blinkTextCursor {
-    from {
-      border-right-color: rgb(255, 255, 255);
-    }
-    to {
-      border-right-color: transparent;
-    }
-  }
-
-  .box-sosmed {
-    width: 65%;
-    height: max-content;
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-    background: linear-gradient(to bottom right, grey, black);
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out;
-  }
-
-  .logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 5px;
-    cursor: pointer;
-  }
-
-  .title {
-    font-size: 2.5em;
-    color:rgb(255, 255, 255);
-    text-shadow: 0 0px 5px white;
-    margin-bottom: 20px;
-  }
-
-  .btn-whatsapp {
-    background: #00cc4b;
-    display: flex;
-    align-items: center;
-    border: none;
-    color: white;
-    padding: 20px 50px;
-    text-decoration: none;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-
-  .btn-whatsapp img {
-    width: 70px;
-    height: 70px;
-    margin-left: 10px;
-  }
-
-  .sosmed {
-    width: 100%;
-    height: max-content;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    width: 150px;
-    height: 150px;
-    padding: 10px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-
-  .title-sosmed {
-    font-size: 1.2em;
-    color:rgb(255, 255, 255);
-    text-shadow: 0 0px 5px white;
-    margin-top: 10px;
-  }
-
-  .fa-whatsapp {
-    margin-left: 8px;
-  }
-
-  .snowflake {
-    position: fixed;
-    top: -10px;
-    z-index: 9999;
-    pointer-events: none;
-    opacity: 0.8;
-    color: #FFF;
-  }
-
-  .hidden {
-    transform: translateY(-100%);
-  }
-
-    /* Modal (gambar besar) */
-.con-tampilkanLogo {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Gaya gambar besar */
-.logo-ygdiperbesar {
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: zoomIn 0.3s ease;
-}
-
-/* Tombol tutup */
-.tutupgambar {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.cursor {
-   width: 20px;
-   height: 20px;
-   border: 10px solid rgb(var(--white-rbg-color));
-   border-radius: 50%;
-   position: absolute;
-   transition-duration: 200ms;
-   transition-timing-function: ease-out;
-   animation: cursor-animate 550ms infinite alternate;
-   pointer-events: none;
-}
-
-.cursor::after {
-   content: "";
-   width: 40px;
-   height: 40px;
-   border: 15px solid rgba(var(--white-rbg-color), .2);
-   border-radius: 50%;
-   position: absolute;
-   top: -25px;
-   left: -25px;
-   animation: cursor-animate-2 550ms infinite alternate;
-}
-
-/*Modificador*/
-.cursor--expand {
-   animation: cursor-animate-3 550ms forwards;
-   border: 10px solid rgb(var(--green-rbg-color));
-}
-
-.cursor--expand::after {
-   border: 15px solid rgba(var(--green-rbg-color), .3);
-}
-
-/*Keyframes*/
-@keyframes cursor-animate {
-   from {
-      transform: scale(1);
-   }
-
-   to {
-      transform: scale(1.5)
-   }
-}
-
-@keyframes cursor-animate-2 {
-   from {
-      transform: scale(1);
-   }
-
-   to {
-      transform: scale(.3);
-   }
-}
-
-@keyframes cursor-animate-3 {
-   0% {
-      transform: scale(1);
-   }
-
-   50% {
-      transform: scale(3);
-   }
-
-   100% {
-      transform: scale(1);
-      opacity: 0;
-   }
-}
-
-
-/* Animasi zoom */
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-  @media screen and (min-width: 824px) {
-    .card:hover {
-      background: rgb(255, 254, 254, .20);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jujuu x RAF - Social Media Links</title>
+  <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="about.css">
+  <style>
+    :root {
+      --black-color: #17181c;
+      --blue-color: #3e50b4;
+      --white-rbg-color: 255, 255, 255;
+      --green-rbg-color: 0, 212, 113;
     }
 
-    .btn-whatsapp:hover {
-      background: white;
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: black;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 0 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+      z-index: 100;
+    }
+
+    .con-logo {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .con-logo i {
       color: #00cc4b;
+      font-size: 2.5em;
+      text-shadow: 0 0px 5px #00cc4b,
+        0 0px 20px #00cc4b;
     }
 
-    .con-logo:hover h1 {
-      text-shadow: 0 0px 5px #ffffff,
-               0 0px 20px #ffffff;
+    .con-logo h1 {
+      font-family: "Audiowide", sans-serif;
+      font-size: 2em;
+      color: white;
     }
 
-  }
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: right;
+    }
 
-  @media screen and (max-width: 824px) {
+    .nav-links {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+    }
+
+    .nav-links:hover {
+      color: #00cc4b;
+      text-shadow: 0 0px 5px #00cc4b,
+        0 0px 20px #00cc4b;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .con-1 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 600px;
+      height: max-content;
+      position: relative;
+    }
+
+    .typedtext {
+      border-right: 2px solid black;
+      animation: blinkTextCursor 800ms steps(44) infinite normal;
+      color: #ffffff;
+      text-shadow: 0 0px 5px white;
+      display: block;
+    }
+
+    @keyframes blinkTextCursor {
+      from {
+        border-right-color: rgb(255, 255, 255);
+      }
+
+      to {
+        border-right-color: transparent;
+      }
+    }
 
     .box-sosmed {
-      width: 95%;
+      width: 65%;
       height: max-content;
       padding: 50px 20px;
       display: flex;
@@ -348,51 +131,43 @@ header {
       align-items: center;
       margin-bottom: 50px;
       background: linear-gradient(to bottom right, grey, black);
-      border-radius: 21px;
+      border-radius: 10px;
+      transition: box-shadow 0.3s ease-in-out;
     }
 
-    .con-1 {
-      width: 95%;
-    }
-
-    .typedtext {
-      font-size: 1.5em;
-    }
-  
-    
     .logo {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       margin-bottom: 5px;
+      cursor: pointer;
     }
 
-    .con-logo {
-      font-size: 0.7em;
-    }
-    
     .title {
-      font-size: 2em;
+      font-size: 2.5em;
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0px 5px white;
+      margin-bottom: 20px;
     }
 
     .btn-whatsapp {
-      font-size: 1.2em;
+      background: #00cc4b;
+      display: flex;
+      align-items: center;
+      border: none;
+      color: white;
+      padding: 20px 50px;
+      text-decoration: none;
+      font-size: 1.5em;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      cursor: pointer;
     }
 
     .btn-whatsapp img {
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       margin-left: 10px;
-    }
-
-    .title-sosmed {
-      font-size: 1em;
-    }
-
-    .card img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
     }
 
     .sosmed {
@@ -403,42 +178,353 @@ header {
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
+    }
+
+    .card {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .title-sosmed {
+      font-size: 1.2em;
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0px 5px white;
+      margin-top: 10px;
+    }
+
+    .fa-whatsapp {
+      margin-left: 8px;
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.8;
+      color: #FFF;
+    }
+
+    .hidden {
+      transform: translateY(-100%);
+    }
+
+    /* Modal (gambar besar) */
+    .con-tampilkanLogo {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Gaya gambar besar */
+    .logo-ygdiperbesar {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      animation: zoomIn 0.3s ease;
+    }
+
+    /* Tombol tutup */
+    .tutupgambar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border: 10px solid rgb(var(--white-rbg-color));
+      border-radius: 50%;
+      position: absolute;
+      transition-duration: 200ms;
+      transition-timing-function: ease-out;
+      animation: cursor-animate 550ms infinite alternate;
+      pointer-events: none;
+    }
+
+    .cursor::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border: 15px solid rgba(var(--white-rbg-color), .2);
+      border-radius: 50%;
+      position: absolute;
+      top: -25px;
+      left: -25px;
+      animation: cursor-animate-2 550ms infinite alternate;
+    }
+
+    /*Modificador*/
+    .cursor--expand {
+      animation: cursor-animate-3 550ms forwards;
+      border: 10px solid rgb(var(--green-rbg-color));
+    }
+
+    .cursor--expand::after {
+      border: 15px solid rgba(var(--green-rbg-color), .3);
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      z-index: 1001;
+      transition: 0.3s ease;
+      padding: 10px;
+    }
+
+    .btn-ham {
+      display: flex;
+      transform: rotate(180deg);
+      font-size: 2em;
+    }
+
+    .btn-ham {
+      display: none;
+    }
+
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .card {
-    width: 130px;
-    height: 130px;
-    padding: 10px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .sidebar-links {
+    width: 100%;
+    height: max-content;
+    color: white;
+    font-size: 1em;
     text-decoration: none;
   }
 
-  .card:active {
-    background: rgb(255, 254, 254, .20);
+  .sidebar-links:hover {
+    color: rgb(0, 255, 0);
+    text-shadow: 0 0px 5px rgb(0, 255, 0);
   }
 
-  .btn-whatsapp:active {
-    background: white;
-    color: #00cc4b;
-  }
+    /*Keyframes*/
+    @keyframes cursor-animate {
+      from {
+        transform: scale(1);
+      }
 
-  .con-logo:active h1 {
-    text-shadow: 0 0px 5px #ffffff,
-               0 0px 20px #ffffff;
-  }
+      to {
+        transform: scale(1.5)
+      }
+    }
 
-}
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    @keyframes cursor-animate-2 {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(.3);
+      }
+    }
+
+    @keyframes cursor-animate-3 {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(3);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+
+    /* Animasi zoom */
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (min-width: 824px) {
+      .card:hover {
+        background: rgb(255, 254, 254, .20);
+      }
+
+      .btn-whatsapp:hover {
+        background: white;
+        color: #00cc4b;
+      }
+
+      .con-logo:hover h1 {
+        text-shadow: 0 0px 5px #ffffff,
+          0 0px 20px #ffffff;
+      }
+
+    }
+
+      @media screen and (max-width: 824px) {
+
+      .box-sosmed {
+        width: 95%;
+        height: max-content;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        background: linear-gradient(to bottom right, grey, black);
+        border-radius: 21px;
+      }
+
+      .con-1 {
+        width: 95%;
+      }
+
+      .typedtext {
+        font-size: 1.5em;
+      }
+
+
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+      }
+
+      .con-logo {
+        font-size: 0.7em;
+      }
+
+      .title {
+        font-size: 2em;
+      }
+
+      .btn-whatsapp {
+        font-size: 1.2em;
+      }
+
+      .btn-whatsapp img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+
+      .title-sosmed {
+        font-size: 1em;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+
+      .sosmed {
+        width: 100%;
+        height: max-content;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 130px;
+        height: 130px;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .card:active {
+        background: rgb(255, 254, 254, .20);
+      }
+
+      .btn-whatsapp:active {
+        background: white;
+        color: #00cc4b;
+      }
+
+      .con-logo:active h1 {
+        text-shadow: 0 0px 5px #ffffff,
+          0 0px 20px #ffffff;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .btn-ham {
+        display: block;
+      }
+
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" type="image/jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
 </head>
+
 <body>
 
   <!-- cursor animation -->
@@ -449,90 +535,212 @@ header {
       <i class="fa-solid fa-leaf"></i>
       <h1 class="">Jujuu x RAF</h1>
     </a>
+
+    <nav>
+      <a href="#home" class="nav-links">Home</a>
+      <a href="#about" class="nav-links">About</a>
+      <a href="#sosmed" class="nav-links">Sosmed Links</a>
+
+      <button
+      style="
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: white;" class="btn-ham" id="btn-ham" onclick="showSidebar()">
+        <span
+        class="material-symbols-outlined">
+          sort
+        </span>
+      </button>
+    </nav>
+
   </header>
 
-    <div class="container" id="home">
-      <div class="con-1">
-        <h1 class="typedtext"></h1>
-      </div>
+  <div class="sidebar" id="sidebar">
+    <a href="#home" class="sidebar-links">Home</a>
+    <a href="#about" class="sidebar-links">About</a>
+    <a href="#sosmed" class="sidebar-links">Sosmed Links</a>
+
+    <button class="btn-close" id="btn-close" onclick="hideSidebar()">
+    <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <script>
+
+    const sidebar = document.getElementById('sidebar');
+    const btnHam = document.getElementById('btn-ham');
+    const btnClose = document.getElementById('btn-close');
+
+
+    function showSidebar() {
+      sidebar.style.right = '0';
+      btnHam.style.display = 'none';
+
+    }
+
+    function hideSidebar() {
+      sidebar.style.right = '-250px';
+      btnHam.style.display = 'block';
+    }
+
+  </script>
+
+  <div class="container" id="home">
+    <div class="con-1">
+      <h1 class="typedtext"></h1>
     </div>
+  </div>
 
-    <div class="box-sosmed" id="sosmed">
-        <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo" onclick="logoBesar()">
-        <p class="title">Jujuu x RAF</p>
-        
-        <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
+  <div
+  style="
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;" class="about" id="about">
 
-
-        <div class="sosmed">
-
-             <a href="https://www.youtube.com/@ranziroo11" class="card">
-                <img src="https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" alt="">
-                <p class="title-sosmed">Youtube</p>
-            </a>
-            
-            <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card">
-                <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png" alt="">
-                <p class="title-sosmed">Instagram</p>
-            </a>
-
-            <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card">
-                <img src="https://static.vecteezy.com/system/resources/previews/042/127/107/non_2x/round-tiktok-logo-on-a-transparent-background-free-png.png" alt="">
-                <p class="title-sosmed">Tiktok</p>
-            </a>
-            
-            <a href="https://discord.com/invite/tgKq5zJ8" class="card">
-              <img src="https://static.vecteezy.com/system/resources/previews/023/986/627/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png" alt="">
-              <p class="title-sosmed">Discord</p>
-          </a>
-
-        </div>
+<div class="warpper">
+  <input class="radio" id="one" name="group" type="radio" checked>
+  <input class="radio" id="two" name="group" type="radio">
+  <input class="radio" id="three" name="group" type="radio">
+  <div class="tabs">
+  <label class="tab" id="one-tab" for="one">About</label>
+  <label class="tab" id="two-tab" for="two">Bio</label>
+  <label class="tab" id="three-tab" for="three">Motivation</label>
     </div>
+  <div class="panels">
+  <div class="panel" id="one-panel">
+    <div class="panel-title">About Me</div>
+    <p>I'm a high school student. Born in Jakarta and now 17 years old.
+      <br>
+      I learned coding in September 2023 when I just started high school. At first I thought coding was difficult, but after I studied more deeply, coding is not that difficult as long as you have a strong determination to keep learning.</p>
+  </div>
+  <div class="panel" id="two-panel">
+    <div class="panel-title">My Profile</div>
+    <p>Full Name :
+      <br>
+      Raditya Arjun Fayyadhin
+      <br>
+      Age :
+      <br>
+      17 years old
+      <br>
+      Gender :
+      <br>
+      Male
+      <br>
+      Religion :
+      <br>
+      Islam
+      <br>
+      Address :
+      <br>
+      Jakarta, Indonesia
 
-    <div
-    style="display: flex;
+    </p>
+  </div>
+  <div class="panel" id="three-panel">
+    <div class="panel-title">My Motivation</div>
+    <br>
+    <p><b>"The darkness of night is always followed by the dawn. Likewise with life; every difficulty will end if you persist and try. Don't give up, because maybe you are just one step away from success."</b>
+
+      <br><br>
+      Remember:
+      <br>
+      Everyone falls, but it is those who rise who will find true strength.
+      Failure is not the end, but a lesson to become better.
+      When the world feels heavy, focus on small steps forward. Little by little, you will get to a better place.
+      Keep your spirits up, and believe that the storm will pass! 🌟</p>
+  </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="box-sosmed" id="sosmed">
+    <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo"
+      onclick="logoBesar()">
+    <p class="title">Jujuu x RAF</p>
+
+    <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    <div class="sosmed">
+
+      <a href="https://www.youtube.com/@ranziroo11" class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png"
+          alt="">
+        <p class="title-sosmed">Youtube</p>
+      </a>
+
+      <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card">
+        <img
+          src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png"
+          alt="">
+        <p class="title-sosmed">Instagram</p>
+      </a>
+
+      <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/042/127/107/non_2x/round-tiktok-logo-on-a-transparent-background-free-png.png"
+          alt="">
+        <p class="title-sosmed">Tiktok</p>
+      </a>
+
+      <a href="https://discord.com/invite/tgKq5zJ8" class="card">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/023/986/627/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png"
+          alt="">
+        <p class="title-sosmed">Discord</p>
+      </a>
+
+    </div>
+  </div>
+
+  <div style="display: flex;
     align-items: center;
     justify-content: center;
     padding: 25px 0px;
     width: 100%;
     color: white;
     font-size: 0.8em;" class="license">
-        <p>© 2024 Jujuu x RAF | All Right Reserved</p>
-    </div>
+    <p>© 2024 Jujuu x RAF | All Right Reserved</p>
+  </div>
 
-    <div style="display: none;"
-    class="con-tampilkanLogo" 
-    id="modalLogo">
+  <div style="display: none;" class="con-tampilkanLogo" id="modalLogo">
 
-   <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar" class="logo-ygdiperbesar">
-   <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
+    <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
+      class="logo-ygdiperbesar">
+    <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
   </div>
 
 
-    <script>
+  <script>
 
-function logoBesar() {
-    const modal = document.getElementById('modalLogo');
-    modal.style.display = 'flex'; // Tampilkan modal
-}
+    function logoBesar() {
+      const modal = document.getElementById('modalLogo');
+      modal.style.display = 'flex'; // Tampilkan modal
+    }
 
-// Menyembunyikan modal
-function tutupLogo() {
-    const modal = document.getElementById('modalLogo');
-    modal.style.display = 'none'; // Sembunyikan modal
-};
+    // Menyembunyikan modal
+    function tutupLogo() {
+      const modal = document.getElementById('modalLogo');
+      modal.style.display = 'none'; // Sembunyikan modal
+    };
 
-function typingEffect() {
-    const contactTexts = shuffleArray(['Hello, I am jujuuxraf',
-     'Link to my social media account 👇',
-      'Dont forget to follow😉']);
-    const typedtext = document.getElementsByClassName("typedtext")[0];
-    let removing = false;
-    let idx = char = 0;
+    function typingEffect() {
+      const contactTexts = shuffleArray(['Hello, I am jujuuxraf',
+        'Link to my social media account 👇',
+        'Dont forget to follow😉']);
+      const typedtext = document.getElementsByClassName("typedtext")[0];
+      let removing = false;
+      let idx = char = 0;
 
-    setInterval(() => { // We define the interval of the typing speed
+      setInterval(() => { // We define the interval of the typing speed
 
         // If we do not reach the limit, we insert characters in the html
         if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
@@ -548,24 +756,24 @@ function typingEffect() {
         // When there is nothing else to remove
         if (typedtext.innerHTML.length === 0) {
 
-            // If we get to the end of the texts we start over
-            if (idx === contactTexts.length - 1) idx = 0
-            else idx++;
+          // If we get to the end of the texts we start over
+          if (idx === contactTexts.length - 1) idx = 0
+          else idx++;
 
-            char = 0; // Start the next text by the first character
-            removing = false; // No more removing characters
+          char = 0; // Start the next text by the first character
+          removing = false; // No more removing characters
         }
 
-    }, 150); // Typing speed, 150 ms
+      }, 150); // Typing speed, 150 ms
 
-}
-typingEffect();
-function shuffleArray(array) {
-    let currentIndex = array.length,
+    }
+    typingEffect();
+    function shuffleArray(array) {
+      let currentIndex = array.length,
         temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
 
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -575,69 +783,70 @@ function shuffleArray(array) {
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
+      }
+
+      return array;
     }
 
-    return array;
-}
+    let lastScrollTop = 0; // Posisi scroll sebelumnya
+    const header = document.getElementById('header');
 
-let lastScrollTop = 0; // Posisi scroll sebelumnya
-const header = document.getElementById('header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset; // Posisi scroll saat ini
-    if (currentScroll > lastScrollTop) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset; // Posisi scroll saat ini
+      if (currentScroll > lastScrollTop) {
         // Scroll ke bawah
         header.classList.add('hidden');
-    } else {
+      } else {
         // Scroll ke atas
         header.classList.remove('hidden');
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pastikan nilai tidak negatif
+    });
+
+
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '•';
+      snowflake.style.fontSize = Math.random() * 24 + 10 + 'px';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animation = `fall ${Math.random() * 4 + 4}s linear infinite, sideWays ${Math.random() * 2 + 1}s ease-in-out infinite`;
+
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, Math.random() * 4000 + 4000);
     }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pastikan nilai tidak negatif
-});
+
+    document.styleSheets[0].insertRule('@keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }', document.styleSheets[0].cssRules.length);
+    document.styleSheets[0].insertRule('@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }', document.styleSheets[0].cssRules.length);
+
+    setInterval(createSnowflake, 200);
+
+    (() => {
+
+      const cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', e => {
+        cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
+      });
+
+      document.addEventListener('click', () => {
+        console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
+
+        cursor.classList.add('cursor--expand');
+        console.log(cursor.classList);
+
+        setTimeout(() => {
+          cursor.classList.remove('cursor--expand');
+        }, 500);
+      });
+    })();
 
 
-function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.textContent = '•';
-    snowflake.style.fontSize = Math.random() * 24 + 10 + 'px';
-    snowflake.style.left = Math.random() * window.innerWidth + 'px';
-    snowflake.style.animation = `fall ${Math.random() * 4 + 4}s linear infinite, sideWays ${Math.random() * 2 + 1}s ease-in-out infinite`;
-  
-    document.body.appendChild(snowflake);
-  
-    setTimeout(() => {
-      snowflake.remove();
-    }, Math.random() * 4000 + 4000);
-  }
-  
-  document.styleSheets[0].insertRule('@keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }', document.styleSheets[0].cssRules.length);
-  document.styleSheets[0].insertRule('@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }', document.styleSheets[0].cssRules.length);
-  
-  setInterval(createSnowflake, 200);
-  
-  (() => { 
+  </script>
 
-const cursor = document.querySelector('.cursor');
-
-document.addEventListener('mousemove', e => {
-   cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
-});
-
-document.addEventListener('click', () => { 
-   console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
-
-   cursor.classList.add('cursor--expand');
-   console.log(cursor.classList);
-
-   setTimeout(() => {
-      cursor.classList.remove('cursor--expand');
-   }, 500);
-});
-})();
-
-
-    </script>
-    
 </body>
+
 </html>
