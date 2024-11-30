@@ -316,32 +316,32 @@
       display: none;
     }
 
-  .btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2em;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .btn-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2em;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  .sidebar-links {
-    width: 100%;
-    height: max-content;
-    color: white;
-    font-size: 1em;
-    text-decoration: none;
-  }
+    .sidebar-links {
+      width: 100%;
+      height: max-content;
+      color: white;
+      font-size: 1em;
+      text-decoration: none;
+    }
 
-  .sidebar-links:hover {
-    color: rgb(0, 255, 0);
-    text-shadow: 0 0px 5px rgb(0, 255, 0);
-  }
+    .sidebar-links:hover {
+      color: rgb(0, 255, 0);
+      text-shadow: 0 0px 5px rgb(0, 255, 0);
+    }
 
     /*Keyframes*/
     @keyframes cursor-animate {
@@ -410,7 +410,7 @@
 
     }
 
-      @media screen and (max-width: 824px) {
+    @media screen and (max-width: 824px) {
 
       .box-sosmed {
         width: 95%;
@@ -515,14 +515,18 @@
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="shortcut icon" href="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" type="image/jpg">
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg"
+    type="image/jpg">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=sort" />
 </head>
 
 <body>
@@ -541,14 +545,12 @@
       <a href="#about" class="nav-links">About</a>
       <a href="#sosmed" class="nav-links">Sosmed Links</a>
 
-      <button
-      style="
+      <button style="
       background: transparent;
       border: none;
       cursor: pointer;
       color: white;" class="btn-ham" id="btn-ham" onclick="showSidebar()">
-        <span
-        class="material-symbols-outlined">
+        <span class="material-symbols-outlined">
           sort
         </span>
       </button>
@@ -562,7 +564,7 @@
     <a href="#sosmed" class="sidebar-links">Sosmed Links</a>
 
     <button class="btn-close" id="btn-close" onclick="hideSidebar()">
-    <i class="fa-solid fa-xmark"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
   </div>
 
@@ -592,69 +594,74 @@
     </div>
   </div>
 
-  <div
-  style="
+  <div style="
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;" class="about" id="about">
 
-<div class="warpper">
-  <input class="radio" id="one" name="group" type="radio" checked>
-  <input class="radio" id="two" name="group" type="radio">
-  <input class="radio" id="three" name="group" type="radio">
-  <div class="tabs">
-  <label class="tab" id="one-tab" for="one">About</label>
-  <label class="tab" id="two-tab" for="two">Bio</label>
-  <label class="tab" id="three-tab" for="three">Motivation</label>
+    <div class="warpper">
+      <input class="radio" id="one" name="group" type="radio" checked>
+      <input class="radio" id="two" name="group" type="radio">
+      <input class="radio" id="three" name="group" type="radio">
+      <div class="tabs">
+        <label class="tab" id="one-tab" for="one">About</label>
+        <label class="tab" id="two-tab" for="two">Bio</label>
+        <label class="tab" id="three-tab" for="three">Motivation</label>
+      </div>
+      <div class="panels">
+        <div class="panel" id="one-panel">
+          <div class="panel-title">About Me</div>
+          <p>I'm a high school student. Born in Jakarta and now 17 years old.
+            <br>
+            I learned coding in September 2023 when I just started high school. At first I thought coding was difficult,
+            but after I studied more deeply, coding is not that difficult as long as you have a strong determination to
+            keep learning.
+          </p>
+        </div>
+        <div class="panel" id="two-panel">
+          <div class="panel-title">My Profile</div>
+          <p>Full Name :
+            <br>
+            Raditya Arjun Fayyadhin
+            <br>
+            Age :
+            <br>
+            17 years old
+            <br>
+            Gender :
+            <br>
+            Male
+            <br>
+            Religion :
+            <br>
+            Islam
+            <br>
+            Address :
+            <br>
+            Jakarta, Indonesia
+
+          </p>
+        </div>
+        <div class="panel" id="three-panel">
+          <div class="panel-title">My Motivation</div>
+          <br>
+          <p><b>"The darkness of night is always followed by the dawn. Likewise with life, every difficulty will end if
+              you persist and try. Don't give up, because maybe you are just one step away from success."</b>
+
+            <br><br>
+            Remember:
+            <br>
+            1. Everyone falls, but it is those who rise who will find true strength.
+            2. Failure is not the end, but a lesson to become better.
+            3. When the world feels heavy, focus on small steps forward. Little by little, you will get to a better
+            place.
+            4. Keep your spirits up, and believe that the storm will pass! 🌟
+          </p>
+        </div>
+      </div>
     </div>
-  <div class="panels">
-  <div class="panel" id="one-panel">
-    <div class="panel-title">About Me</div>
-    <p>I'm a high school student. Born in Jakarta and now 17 years old.
-      <br>
-      I learned coding in September 2023 when I just started high school. At first I thought coding was difficult, but after I studied more deeply, coding is not that difficult as long as you have a strong determination to keep learning.</p>
-  </div>
-  <div class="panel" id="two-panel">
-    <div class="panel-title">My Profile</div>
-    <p>Full Name :
-      <br>
-      Raditya Arjun Fayyadhin
-      <br>
-      Age :
-      <br>
-      17 years old
-      <br>
-      Gender :
-      <br>
-      Male
-      <br>
-      Religion :
-      <br>
-      Islam
-      <br>
-      Address :
-      <br>
-      Jakarta, Indonesia
-
-    </p>
-  </div>
-  <div class="panel" id="three-panel">
-    <div class="panel-title">My Motivation</div>
-    <br>
-    <p><b>"The darkness of night is always followed by the dawn. Likewise with life; every difficulty will end if you persist and try. Don't give up, because maybe you are just one step away from success."</b>
-
-      <br><br>
-      Remember:
-      <br>
-      Everyone falls, but it is those who rise who will find true strength.
-      Failure is not the end, but a lesson to become better.
-      When the world feels heavy, focus on small steps forward. Little by little, you will get to a better place.
-      Keep your spirits up, and believe that the storm will pass! 🌟</p>
-  </div>
-  </div>
-</div>
 
   </div>
 
