@@ -249,13 +249,16 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      background: red;
-      color: white;
+      background: transparent;
+      color: red;
       border: none;
       border-radius: 5px;
-      padding: 10px 15px;
-      font-size: 16px;
+      padding: 10px;
+      font-size: 2em;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .cursor {
@@ -725,7 +728,7 @@
 
     <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
       class="logo-ygdiperbesar">
-    <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
+    <button class="tutupgambar" onclick="tutupLogo()"><i class="fa-solid fa-xmark"></i></button>
   </div>
 
 
