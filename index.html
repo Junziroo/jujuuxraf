@@ -6,6 +6,14 @@
     <title>Jujuu x RAF - Social Media Links</title>
     <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
     <style>
+
+:root {
+   --black-color: #17181c;
+   --blue-color: #3e50b4;
+   --white-rbg-color: 255, 255, 255;
+   --green-rbg-color: 0, 212, 113;
+}
+
         * {
     padding: 0;
     margin: 0;
@@ -111,6 +119,7 @@ header {
     height: 200px;
     border-radius: 50%;
     margin-bottom: 5px;
+    cursor: pointer;
   }
 
   .title {
@@ -187,6 +196,128 @@ header {
     color: #FFF;
   }
 
+  .hidden {
+    transform: translateY(-100%);
+  }
+
+    /* Modal (gambar besar) */
+.con-tampilkanLogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gaya gambar besar */
+.logo-ygdiperbesar {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Tombol tutup */
+.tutupgambar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cursor {
+   width: 20px;
+   height: 20px;
+   border: 10px solid rgb(var(--white-rbg-color));
+   border-radius: 50%;
+   position: absolute;
+   transition-duration: 200ms;
+   transition-timing-function: ease-out;
+   animation: cursor-animate 550ms infinite alternate;
+   pointer-events: none;
+}
+
+.cursor::after {
+   content: "";
+   width: 40px;
+   height: 40px;
+   border: 15px solid rgba(var(--white-rbg-color), .2);
+   border-radius: 50%;
+   position: absolute;
+   top: -25px;
+   left: -25px;
+   animation: cursor-animate-2 550ms infinite alternate;
+}
+
+/*Modificador*/
+.cursor--expand {
+   animation: cursor-animate-3 550ms forwards;
+   border: 10px solid rgb(var(--green-rbg-color));
+}
+
+.cursor--expand::after {
+   border: 15px solid rgba(var(--green-rbg-color), .3);
+}
+
+/*Keyframes*/
+@keyframes cursor-animate {
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(1.5)
+   }
+}
+
+@keyframes cursor-animate-2 {
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(.3);
+   }
+}
+
+@keyframes cursor-animate-3 {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(3);
+   }
+
+   100% {
+      transform: scale(1);
+      opacity: 0;
+   }
+}
+
+
+/* Animasi zoom */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
   @media screen and (min-width: 768px) {
     .card:hover {
@@ -236,7 +367,7 @@ header {
     }
 
     .con-logo {
-      font-size: 0.8em;
+      font-size: 0.7em;
     }
     
     .title {
@@ -309,13 +440,14 @@ header {
 </head>
 <body>
 
-  <header>
+  <!-- cursor animation -->
+  <div class="cursor"></div>
+
+  <header id="header">
     <a href="#home" class="con-logo">
       <i class="fa-solid fa-leaf"></i>
       <h1 class="">Jujuu x RAF</h1>
     </a>
-
-
   </header>
 
     <div class="container" id="home">
@@ -324,10 +456,8 @@ header {
       </div>
     </div>
 
-    <div class="about" id="about"></div>
-
     <div class="box-sosmed" id="sosmed">
-        <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo">
+        <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo" onclick="logoBesar()">
         <p class="title">Jujuu x RAF</p>
         
         <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
@@ -354,11 +484,43 @@ header {
         </div>
     </div>
 
+    <div
+    style="display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0px;
+    width: 100%;
+    color: white;
+    font-size: 0.8em;" class="license">
+        <p>© 2024 Jujuu x RAF | All Right Reserved</p>
+    </div>
+
+    <div style="display: none;"
+    class="con-tampilkanLogo" 
+    id="modalLogo">
+
+   <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar" class="logo-ygdiperbesar">
+   <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
+  </div>
+
+
     <script>
+
+function logoBesar() {
+    const modal = document.getElementById('modalLogo');
+    modal.style.display = 'flex'; // Tampilkan modal
+}
+
+// Menyembunyikan modal
+function tutupLogo() {
+    const modal = document.getElementById('modalLogo');
+    modal.style.display = 'none'; // Sembunyikan modal
+};
+
 function typingEffect() {
     const contactTexts = shuffleArray(['Hello, I am jujuuxraf',
      'Link to my social media account 👇',
-      'dont forget to follow😉']);
+      'Dont forget to follow😉']);
     const typedtext = document.getElementsByClassName("typedtext")[0];
     let removing = false;
     let idx = char = 0;
@@ -411,6 +573,22 @@ function shuffleArray(array) {
     return array;
 }
 
+let lastScrollTop = 0; // Posisi scroll sebelumnya
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset; // Posisi scroll saat ini
+    if (currentScroll > lastScrollTop) {
+        // Scroll ke bawah
+        header.classList.add('hidden');
+    } else {
+        // Scroll ke atas
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pastikan nilai tidak negatif
+});
+
+
 function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
@@ -430,6 +608,28 @@ function createSnowflake() {
   document.styleSheets[0].insertRule('@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }', document.styleSheets[0].cssRules.length);
   
   setInterval(createSnowflake, 200);
+  
+  (() => { 
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+   cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
+});
+
+document.addEventListener('click', () => { 
+   console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
+
+   cursor.classList.add('cursor--expand');
+   console.log(cursor.classList);
+
+   setTimeout(() => {
+      cursor.classList.remove('cursor--expand');
+   }, 500);
+});
+})();
+
+
     </script>
     
 </body>
