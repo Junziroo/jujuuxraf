@@ -37,11 +37,12 @@
   }
   .panel-title{
     width: max-content;
-    padding: 5px 20px;
+    padding: 5px 20px 40px 80px;
     border: 2px solid black;
     border-radius: 30px;
     font-size:1.5em;
-    font-weight:bold
+    font-weight:bold;
+    margin-bottom: 10px;
   }
   .radio{
     display:none;
