@@ -269,9 +269,11 @@
       transition-timing-function: ease-out;
       animation: cursor-animate 550ms infinite alternate;
       pointer-events: none;
+      z-index: 2;
     }
 
     .cursor::after {
+      z-index: 2;
       content: "";
       width: 40px;
       height: 40px;
@@ -285,11 +287,13 @@
 
     /*Modificador*/
     .cursor--expand {
+      z-index: 2;
       animation: cursor-animate-3 550ms forwards;
       border: 10px solid rgb(var(--green-rbg-color));
     }
 
     .cursor--expand::after {
+      z-index: 2;
       border: 15px solid rgba(var(--green-rbg-color), .3);
     }
 
