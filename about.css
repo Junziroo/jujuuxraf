@@ -26,6 +26,11 @@
     display:none;
     animation: fadein .8s;
   }
+
+.panel p {
+    width: 100%;
+}
+
   @keyframes fadein {
       from {
           opacity:0;
