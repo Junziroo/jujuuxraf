@@ -63,11 +63,17 @@
   @media screen and (max-width: 824px) {
 
     .warpper {
-        width: 100%;
+        width: 95%;
     }
     .panels{
       width:95%;
       height: max-content;
       box-shadow: -10px 1rem 1px #ffffff80;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .warpper {
+      width: 95%;
     }
   }
