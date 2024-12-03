@@ -17,7 +17,6 @@
     background:#fffffff6;
     box-shadow: 2rem 2rem 1px #ffffff80;
     height:350px;
-    width:900px;
     border-radius:3px;
     overflow:hidden;
     padding:20px;
@@ -72,8 +71,8 @@
     }
   }
 
-  @media screen and (max-width: 3000px) {
+  @media screen and (min-width: 824px) {
     .warpper {
-      width: 95%;
+      width: 80%;
     }
   }
