@@ -76,13 +76,13 @@
     }
   }
 
-  @media screen and (max-width: 1240px) {
+  @media screen and (min-width: 824px) {
     .panels {
       width: 700px;
     }
   }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 900px) {
     .panels {
         width: 80%;
     }
