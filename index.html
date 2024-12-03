@@ -7,6 +7,7 @@
   <title>Jujuu x RAF - Social Media Links</title>
   <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="timeline.css">
   <style>
     :root {
       --black-color: #17181c;
@@ -249,16 +250,13 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      background: transparent;
-      color: red;
+      background: red;
+      color: white;
       border: none;
       border-radius: 5px;
-      padding: 10px;
-      font-size: 2em;
+      padding: 10px 15px;
+      font-size: 16px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .cursor {
@@ -601,10 +599,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100%;" class="about" id="about">
+  height: max-content;
+  margin-bottom: 50px;
+  width: 100%;" class="about">
 
-    <div class="warpper">
+    <div class="warpper"  id="about">
       <input class="radio" id="one" name="group" type="radio" checked>
       <input class="radio" id="two" name="group" type="radio">
       <input class="radio" id="three" name="group" type="radio">
@@ -657,18 +656,93 @@
             Remember:
             <br>
             1. Everyone falls, but it is those who rise who will find true strength.
-            <br>
             2. Failure is not the end, but a lesson to become better.
-            <br>
             3. When the world feels heavy, focus on small steps forward. Little by little, you will get to a better
             place.
-            <br>
             4. Keep your spirits up, and believe that the storm will pass! 🌟
           </p>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="tag-list">
+    <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+      <div class="inner">
+        <div class="tag"><span>#</span> JavaScript</div>
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Typescript</div>
+        <div class="tag"><span>#</span> Next.js</div>
+        <div class="tag"><span>#</span> UI/UX</div>
+        <!-- duplicated content -->
+        <div class="tag"><span>#</span> JavaScript</div>
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Typescript</div>
+        <div class="tag"><span>#</span> Next.js</div>
+        <div class="tag"><span>#</span> UI/UX</div>
+      </div>
+    </div>
+    <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
+      <div class="inner">
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Gatsby</div>
+        <div class="tag"><span>#</span> JavaScript</div>
+        <div class="tag"><span>#</span> Tailwind</div>
+        <div class="tag"><span>#</span> Typescript</div>
+        <!-- duplicated content -->
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Gatsby</div>
+        <div class="tag"><span>#</span> JavaScript</div>
+        <div class="tag"><span>#</span> Tailwind</div>
+        <div class="tag"><span>#</span> Typescript</div>
+      </div>
+    </div>
+    <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
+      <div class="inner">
+        <div class="tag"><span>#</span> animation</div>
+        <div class="tag"><span>#</span> Tailwind</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> SVG</div>
+        <div class="tag"><span>#</span> HTML</div>
+        <!-- duplicated content -->
+        <div class="tag"><span>#</span> animation</div>
+        <div class="tag"><span>#</span> Tailwind</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> SVG</div>
+        <div class="tag"><span>#</span> HTML</div>
+      </div>
+    </div>
+    <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
+      <div class="inner">
+        <div class="tag"><span>#</span> Gatsby</div>
+        <div class="tag"><span>#</span> HTML</div>
+        <div class="tag"><span>#</span> CSS</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> Next.js</div>
+        <!-- duplicated content -->
+        <div class="tag"><span>#</span> Gatsby</div>
+        <div class="tag"><span>#</span> HTML</div>
+        <div class="tag"><span>#</span> CSS</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> Next.js</div>
+      </div>
+    </div>
+    <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
+      <div class="inner">
+        <div class="tag"><span>#</span> Next.js</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Typescript</div>
+        <div class="tag"><span>#</span> Gatsby</div>
+        <!-- duplicated content -->
+        <div class="tag"><span>#</span> Next.js</div>
+        <div class="tag"><span>#</span> React</div>
+        <div class="tag"><span>#</span> webdev</div>
+        <div class="tag"><span>#</span> Typescript</div>
+        <div class="tag"><span>#</span> Gatsby</div>
+      </div>
+    </div>
+    <div class="fade"></div>
   </div>
 
   <div class="box-sosmed" id="sosmed">
@@ -717,9 +791,9 @@
   <div style="display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 0px;
     width: 100%;
     color: white;
+    margin-bottom: 10px;
     font-size: 0.8em;" class="license">
     <p>© 2024 Jujuu x RAF | All Right Reserved</p>
   </div>
@@ -728,7 +802,7 @@
 
     <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
       class="logo-ygdiperbesar">
-    <button class="tutupgambar" onclick="tutupLogo()"><i class="fa-solid fa-xmark"></i></button>
+    <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
   </div>
 
 
