@@ -15,13 +15,14 @@
   }
   .panels{
     background:#fffffff6;
-    box-shadow: 0 2rem 2rem #ffffff80;
+    box-shadow: 2rem 2rem 1px #ffffff80;
     height:350px;
     width:900px;
     border-radius:3px;
     overflow:hidden;
     padding:20px;  
   }
+
   .panel{
     display:none;
     animation: fadein .8s;
@@ -62,5 +63,6 @@
     .panels{
       width:95%;
       height: max-content;
+      box-shadow: -10px 1rem 1px #ffffff80;
     }
   }
