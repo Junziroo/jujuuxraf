@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="timeline.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
       --black-color: #17181c;
@@ -26,10 +27,16 @@
     }
 
     body {
+      overflow-x: hidden;
+    }
+
+    .body-2 {
       display: flex;
       flex-direction: column;
       align-items: center;
       background: black;
+      height: max-content;
+      width: 100%;
     }
 
     header {
@@ -269,7 +276,7 @@
       transition-timing-function: ease-out;
       animation: cursor-animate 550ms infinite alternate;
       pointer-events: none;
-      z-index: 2;
+      z-index: 2000;
     }
 
     .cursor::after {
@@ -535,7 +542,7 @@
 </head>
 
 <body>
-
+  <div class="body-2">
   <!-- cursor animation -->
   <div class="cursor"></div>
 
@@ -548,6 +555,7 @@
     <nav>
       <a href="#home" class="nav-links">Home</a>
       <a href="#about" class="nav-links">About</a>
+      <a href="#works" class="nav-links">Works</a>
       <a href="#sosmed" class="nav-links">Sosmed Links</a>
 
       <button style="
@@ -566,6 +574,7 @@
   <div class="sidebar" id="sidebar">
     <a href="#home" class="sidebar-links">Home</a>
     <a href="#about" class="sidebar-links">About</a>
+    <a href="#works" class="sidebar-links">Works</a>
     <a href="#sosmed" class="sidebar-links">Sosmed Links</a>
 
     <button class="btn-close" id="btn-close" onclick="hideSidebar()">
@@ -603,11 +612,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: max-content;
+  height: 100vh;
   margin-bottom: 50px;
-  width: 100%;" class="about">
+  width: 100%;" class="about" id="about">
 
-    <div class="warpper"  id="about">
+    <div class="warpper" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
       <input class="radio" id="one" name="group" type="radio" checked>
       <input class="radio" id="two" name="group" type="radio">
       <input class="radio" id="three" name="group" type="radio">
@@ -670,7 +679,25 @@
     </div>
   </div>
 
-  <div class="tag-list">
+  <div
+  style="
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;" class="Works" id="works">
+    
+  <div class="tag-list" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300">
+    <!-- title infinite scroll -->
+    <h1 class="title-aurora">Infinite Scroll
+      <div class="aurora">
+        <div class="aurora__item"></div>
+        <div class="aurora__item"></div>
+        <div class="aurora__item"></div>
+        <div class="aurora__item"></div>
+      </div>
+    </h1>
+
     <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
       <div class="inner">
         <div class="tag"><span>#</span> JavaScript</div>
@@ -749,7 +776,20 @@
     <div class="fade"></div>
   </div>
 
-  <div class="box-sosmed" id="sosmed">
+</div>
+
+<div 
+style="
+height: max-content;
+padding: 50px 0px 0 0;
+width: 100%;
+display: flex;
+align-items: center;
+flex-direction: column;" class="container-sosialmedia" id="sosmed" >
+
+  <div
+  style="
+  margin-top: 10px;" class="box-sosmed" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-delay="300">
     <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo"
       onclick="logoBesar()">
     <p class="title">Jujuu x RAF</p>
@@ -760,29 +800,28 @@
 
 
     <div class="sosmed">
-
-      <a href="https://www.youtube.com/@ranziroo11" class="card">
+      <a href="https://www.youtube.com/@ranziroo11" class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
         <img
           src="https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png"
           alt="">
         <p class="title-sosmed">Youtube</p>
       </a>
 
-      <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card">
+      <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
         <img
           src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png"
           alt="">
         <p class="title-sosmed">Instagram</p>
       </a>
 
-      <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card">
+      <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card" data-aos="fade-up" data-aos-duration="1700" data-aos-delay="300">
         <img
           src="https://static.vecteezy.com/system/resources/previews/042/127/107/non_2x/round-tiktok-logo-on-a-transparent-background-free-png.png"
           alt="">
         <p class="title-sosmed">Tiktok</p>
       </a>
 
-      <a href="https://discord.com/invite/tgKq5zJ8" class="card">
+      <a href="https://discord.com/invite/tgKq5zJ8" class="card" data-aos="fade-up" data-aos-duration="2100" data-aos-delay="300">
         <img
           src="https://static.vecteezy.com/system/resources/previews/023/986/627/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png"
           alt="">
@@ -791,6 +830,8 @@
 
     </div>
   </div>
+
+</div>
 
   <div style="display: flex;
     align-items: center;
@@ -935,8 +976,14 @@
       });
     })();
 
-
   </script>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 
 </body>
 
