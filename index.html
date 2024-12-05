@@ -543,72 +543,72 @@
 
 <body>
   <div class="body-2">
-  <!-- cursor animation -->
-  <div class="cursor"></div>
+    <!-- cursor animation -->
+    <div class="cursor"></div>
 
-  <header id="header">
-    <a href="#home" class="con-logo">
-      <i class="fa-solid fa-leaf"></i>
-      <h1 class="">Jujuu x RAF</h1>
-    </a>
+    <header id="header">
+      <a href="#home" class="con-logo">
+        <i class="fa-solid fa-leaf"></i>
+        <h1 class="">Jujuu x RAF</h1>
+      </a>
 
-    <nav>
-      <a href="#home" class="nav-links">Home</a>
-      <a href="#about" class="nav-links">About</a>
-      <a href="#works" class="nav-links">Works</a>
-      <a href="#sosmed" class="nav-links">Sosmed Links</a>
+      <nav>
+        <a href="#home" class="nav-links">Home</a>
+        <a href="#about" class="nav-links">About</a>
+        <a href="#works" class="nav-links">Works</a>
+        <a href="#sosmed" class="nav-links">Sosmed Links</a>
 
-      <button style="
+        <button style="
       background: transparent;
       border: none;
       cursor: pointer;
       color: white;" class="btn-ham" id="btn-ham" onclick="showSidebar()">
-        <span class="material-symbols-outlined">
-          sort
-        </span>
+          <span class="material-symbols-outlined">
+            sort
+          </span>
+        </button>
+      </nav>
+
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <a href="#home" class="sidebar-links">Home</a>
+      <a href="#about" class="sidebar-links">About</a>
+      <a href="#works" class="sidebar-links">Works</a>
+      <a href="#sosmed" class="sidebar-links">Sosmed Links</a>
+
+      <button class="btn-close" id="btn-close" onclick="hideSidebar()">
+        <i class="fa-solid fa-xmark"></i>
       </button>
-    </nav>
-
-  </header>
-
-  <div class="sidebar" id="sidebar">
-    <a href="#home" class="sidebar-links">Home</a>
-    <a href="#about" class="sidebar-links">About</a>
-    <a href="#works" class="sidebar-links">Works</a>
-    <a href="#sosmed" class="sidebar-links">Sosmed Links</a>
-
-    <button class="btn-close" id="btn-close" onclick="hideSidebar()">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
-
-  <script>
-
-    const sidebar = document.getElementById('sidebar');
-    const btnHam = document.getElementById('btn-ham');
-    const btnClose = document.getElementById('btn-close');
-
-
-    function showSidebar() {
-      sidebar.style.right = '0';
-      btnHam.style.display = 'none';
-
-    }
-
-    function hideSidebar() {
-      sidebar.style.right = '-250px';
-      btnHam.style.display = 'block';
-    }
-
-  </script>
-
-  <div class="container" id="home">
-    <div class="con-1">
-      <h1 class="typedtext"></h1>
     </div>
-  </div>
 
-  <div style="
+    <script>
+
+      const sidebar = document.getElementById('sidebar');
+      const btnHam = document.getElementById('btn-ham');
+      const btnClose = document.getElementById('btn-close');
+
+
+      function showSidebar() {
+        sidebar.style.right = '0';
+        btnHam.style.display = 'none';
+
+      }
+
+      function hideSidebar() {
+        sidebar.style.right = '-250px';
+        btnHam.style.display = 'block';
+      }
+
+    </script>
+
+    <div class="container" id="home">
+      <div class="con-1">
+        <h1 class="typedtext"></h1>
+      </div>
+    </div>
+
+    <div style="
   display: flex;
   align-items: center;
   justify-content: center;
@@ -616,367 +616,371 @@
   margin-bottom: 50px;
   width: 100%;" class="about" id="about">
 
-    <div class="warpper" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
-      <input class="radio" id="one" name="group" type="radio" checked>
-      <input class="radio" id="two" name="group" type="radio">
-      <input class="radio" id="three" name="group" type="radio">
-      <div class="tabs">
-        <label class="tab" id="one-tab" for="one">About</label>
-        <label class="tab" id="two-tab" for="two">Bio</label>
-        <label class="tab" id="three-tab" for="three">Motivation</label>
-      </div>
-      <div class="panels">
-        <div class="panel" id="one-panel">
-          <div class="panel-title">About Me</div>
-          <p>I'm a high school student. Born in Jakarta and now 17 years old.
-            <br>
-            I learned coding in September 2023 when I just started high school. At first I thought coding was difficult,
-            but after I studied more deeply, coding is not that difficult as long as you have a strong determination to
-            keep learning.
-          </p>
+      <div class="warpper" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300">
+        <input class="radio" id="one" name="group" type="radio" checked>
+        <input class="radio" id="two" name="group" type="radio">
+        <input class="radio" id="three" name="group" type="radio">
+        <div class="tabs">
+          <label class="tab" id="one-tab" for="one">About</label>
+          <label class="tab" id="two-tab" for="two">Bio</label>
+          <label class="tab" id="three-tab" for="three">Motivation</label>
         </div>
-        <div class="panel" id="two-panel">
-          <div class="panel-title">My Profile</div>
-          <p>Full Name :
-            <br>
-            Jujuu x RAF
-            <br>
-            Age :
-            <br>
-            17 years old
-            <br>
-            Gender :
-            <br>
-            Male
-            <br>
-            Religion :
-            <br>
-            Islam
-            <br>
-            Address :
-            <br>
-            Jakarta, Indonesia
+        <div class="panels">
+          <div class="panel" id="one-panel">
+            <div class="panel-title">About Me</div>
+            <p>I'm a high school student. Born in Jakarta and now 17 years old.
+              <br>
+              I learned coding in September 2023 when I just started high school. At first I thought coding was
+              difficult,
+              but after I studied more deeply, coding is not that difficult as long as you have a strong determination
+              to
+              keep learning.
+            </p>
+          </div>
+          <div class="panel" id="two-panel">
+            <div class="panel-title">My Profile</div>
+            <p>Full Name :
+              <br>
+              Jujuu x RAF
+              <br>
+              Age :
+              <br>
+              17 years old
+              <br>
+              Gender :
+              <br>
+              Male
+              <br>
+              Religion :
+              <br>
+              Islam
+              <br>
+              Address :
+              <br>
+              Jakarta, Indonesia
 
-          </p>
-        </div>
-        <div class="panel" id="three-panel">
-          <div class="panel-title">My Motivation</div>
-          <br>
-          <p><b>"The darkness of night is always followed by the dawn. Likewise with life, every difficulty will end if
-              you persist and try. Don't give up, because maybe you are just one step away from success."</b>
-
-            <br><br>
-            Remember:
+            </p>
+          </div>
+          <div class="panel" id="three-panel">
+            <div class="panel-title">My Motivation</div>
             <br>
-            1. Everyone falls, but it is those who rise who will find true strength.
-            2. Failure is not the end, but a lesson to become better.
-            3. When the world feels heavy, focus on small steps forward. Little by little, you will get to a better
-            place.
-            4. Keep your spirits up, and believe that the storm will pass! 🌟
-          </p>
+            <p><b>"The darkness of night is always followed by the dawn. Likewise with life, every difficulty will end
+                if
+                you persist and try. Don't give up, because maybe you are just one step away from success."</b>
+
+              <br><br>
+              Remember:
+              <br>
+              1. Everyone falls, but it is those who rise who will find true strength.
+              2. Failure is not the end, but a lesson to become better.
+              3. When the world feels heavy, focus on small steps forward. Little by little, you will get to a better
+              place.
+              4. Keep your spirits up, and believe that the storm will pass! 🌟
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div
-  style="
+    <div style="
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;" class="Works" id="works">
-    
-  <div class="tag-list" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300">
-    <!-- title infinite scroll -->
-    <h1 class="title-aurora">Infinite Scroll
-      <div class="aurora">
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-        <div class="aurora__item"></div>
-      </div>
-    </h1>
 
-    <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
-      <div class="inner">
-        <div class="tag"><span>#</span> JavaScript</div>
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Typescript</div>
-        <div class="tag"><span>#</span> Next.js</div>
-        <div class="tag"><span>#</span> UI/UX</div>
-        <!-- duplicated content -->
-        <div class="tag"><span>#</span> JavaScript</div>
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Typescript</div>
-        <div class="tag"><span>#</span> Next.js</div>
-        <div class="tag"><span>#</span> UI/UX</div>
-      </div>
-    </div>
-    <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
-      <div class="inner">
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Gatsby</div>
-        <div class="tag"><span>#</span> JavaScript</div>
-        <div class="tag"><span>#</span> Tailwind</div>
-        <div class="tag"><span>#</span> Typescript</div>
-        <!-- duplicated content -->
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Gatsby</div>
-        <div class="tag"><span>#</span> JavaScript</div>
-        <div class="tag"><span>#</span> Tailwind</div>
-        <div class="tag"><span>#</span> Typescript</div>
-      </div>
-    </div>
-    <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
-      <div class="inner">
-        <div class="tag"><span>#</span> animation</div>
-        <div class="tag"><span>#</span> Tailwind</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> SVG</div>
-        <div class="tag"><span>#</span> HTML</div>
-        <!-- duplicated content -->
-        <div class="tag"><span>#</span> animation</div>
-        <div class="tag"><span>#</span> Tailwind</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> SVG</div>
-        <div class="tag"><span>#</span> HTML</div>
-      </div>
-    </div>
-    <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
-      <div class="inner">
-        <div class="tag"><span>#</span> Gatsby</div>
-        <div class="tag"><span>#</span> HTML</div>
-        <div class="tag"><span>#</span> CSS</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> Next.js</div>
-        <!-- duplicated content -->
-        <div class="tag"><span>#</span> Gatsby</div>
-        <div class="tag"><span>#</span> HTML</div>
-        <div class="tag"><span>#</span> CSS</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> Next.js</div>
-      </div>
-    </div>
-    <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
-      <div class="inner">
-        <div class="tag"><span>#</span> Next.js</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Typescript</div>
-        <div class="tag"><span>#</span> Gatsby</div>
-        <!-- duplicated content -->
-        <div class="tag"><span>#</span> Next.js</div>
-        <div class="tag"><span>#</span> React</div>
-        <div class="tag"><span>#</span> webdev</div>
-        <div class="tag"><span>#</span> Typescript</div>
-        <div class="tag"><span>#</span> Gatsby</div>
-      </div>
-    </div>
-    <div class="fade"></div>
-  </div>
+      <div class="tag-list" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="300">
+        <!-- title infinite scroll -->
+        <h1 class="title-aurora">Infinite Scroll
+          <div class="aurora">
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+          </div>
+        </h1>
 
-</div>
+        <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+          <div class="inner">
+            <div class="tag"><span>#</span> JavaScript</div>
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Typescript</div>
+            <div class="tag"><span>#</span> Next.js</div>
+            <div class="tag"><span>#</span> UI/UX</div>
+            <!-- duplicated content -->
+            <div class="tag"><span>#</span> JavaScript</div>
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Typescript</div>
+            <div class="tag"><span>#</span> Next.js</div>
+            <div class="tag"><span>#</span> UI/UX</div>
+          </div>
+        </div>
+        <div class="loop-slider" style="--duration:19260ms; --direction:reverse;">
+          <div class="inner">
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Gatsby</div>
+            <div class="tag"><span>#</span> JavaScript</div>
+            <div class="tag"><span>#</span> Tailwind</div>
+            <div class="tag"><span>#</span> Typescript</div>
+            <!-- duplicated content -->
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Gatsby</div>
+            <div class="tag"><span>#</span> JavaScript</div>
+            <div class="tag"><span>#</span> Tailwind</div>
+            <div class="tag"><span>#</span> Typescript</div>
+          </div>
+        </div>
+        <div class="loop-slider" style="--duration:10449ms; --direction:normal;">
+          <div class="inner">
+            <div class="tag"><span>#</span> animation</div>
+            <div class="tag"><span>#</span> Tailwind</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> SVG</div>
+            <div class="tag"><span>#</span> HTML</div>
+            <!-- duplicated content -->
+            <div class="tag"><span>#</span> animation</div>
+            <div class="tag"><span>#</span> Tailwind</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> SVG</div>
+            <div class="tag"><span>#</span> HTML</div>
+          </div>
+        </div>
+        <div class="loop-slider" style="--duration:16638ms; --direction:reverse;">
+          <div class="inner">
+            <div class="tag"><span>#</span> Gatsby</div>
+            <div class="tag"><span>#</span> HTML</div>
+            <div class="tag"><span>#</span> CSS</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> Next.js</div>
+            <!-- duplicated content -->
+            <div class="tag"><span>#</span> Gatsby</div>
+            <div class="tag"><span>#</span> HTML</div>
+            <div class="tag"><span>#</span> CSS</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> Next.js</div>
+          </div>
+        </div>
+        <div class="loop-slider" style="--duration:15936ms; --direction:normal;">
+          <div class="inner">
+            <div class="tag"><span>#</span> Next.js</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Typescript</div>
+            <div class="tag"><span>#</span> Gatsby</div>
+            <!-- duplicated content -->
+            <div class="tag"><span>#</span> Next.js</div>
+            <div class="tag"><span>#</span> React</div>
+            <div class="tag"><span>#</span> webdev</div>
+            <div class="tag"><span>#</span> Typescript</div>
+            <div class="tag"><span>#</span> Gatsby</div>
+          </div>
+        </div>
+        <div class="fade"></div>
+      </div>
 
-<div 
-style="
+    </div>
+
+    <div style="
 height: max-content;
 padding: 50px 0px 0 0;
 width: 100%;
 display: flex;
 align-items: center;
-flex-direction: column;" class="container-sosialmedia" id="sosmed" >
+flex-direction: column;" class="container-sosialmedia" id="sosmed">
 
-  <div
-  style="
+      <div style="
   margin-top: 10px;" class="box-sosmed" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-delay="300">
-    <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo"
-      onclick="logoBesar()">
-    <p class="title">Jujuu x RAF</p>
+        <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="" class="logo"
+          onclick="logoBesar()">
+        <p class="title">Jujuu x RAF</p>
 
-    <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
 
-    <div class="sosmed">
-      <a href="https://www.youtube.com/@ranziroo11" class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png"
-          alt="">
-        <p class="title-sosmed">Youtube</p>
-      </a>
+        <div class="sosmed">
+          <a href="https://www.youtube.com/@ranziroo11" class="card" data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="300">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/023/986/704/non_2x/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png"
+              alt="">
+            <p class="title-sosmed">Youtube</p>
+          </a>
 
-      <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
-        <img
-          src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png"
-          alt="">
-        <p class="title-sosmed">Instagram</p>
-      </a>
+          <a href="https://www.instagram.com/jujuuxraf/?igsh=YjM1a3B3emRwNzFp#" class="card" data-aos="fade-up"
+            data-aos-duration="1300" data-aos-delay="300">
+            <img
+              src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png"
+              alt="">
+            <p class="title-sosmed">Instagram</p>
+          </a>
 
-      <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card" data-aos="fade-up" data-aos-duration="1700" data-aos-delay="300">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/042/127/107/non_2x/round-tiktok-logo-on-a-transparent-background-free-png.png"
-          alt="">
-        <p class="title-sosmed">Tiktok</p>
-      </a>
+          <a href="https://www.tiktok.com/@jujuuxraf?_t=8rnV9Rl7K6s&_r=1" class="card" data-aos="fade-up"
+            data-aos-duration="1700" data-aos-delay="300">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/042/127/107/non_2x/round-tiktok-logo-on-a-transparent-background-free-png.png"
+              alt="">
+            <p class="title-sosmed">Tiktok</p>
+          </a>
 
-      <a href="https://discord.com/invite/tgKq5zJ8" class="card" data-aos="fade-up" data-aos-duration="2100" data-aos-delay="300">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/023/986/627/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png"
-          alt="">
-        <p class="title-sosmed">Discord</p>
-      </a>
+          <a href="https://discord.com/invite/tgKq5zJ8" class="card" data-aos="fade-up" data-aos-duration="2100"
+            data-aos-delay="300">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/023/986/627/non_2x/discord-logo-discord-logo-transparent-discord-icon-transparent-free-free-png.png"
+              alt="">
+            <p class="title-sosmed">Discord</p>
+          </a>
+
+        </div>
+      </div>
 
     </div>
-  </div>
 
-</div>
-
-  <div style="display: flex;
+    <div style="display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     color: white;
     margin-bottom: 10px;
     font-size: 0.8em;" class="license">
-    <p>© 2024 Jujuu x RAF | All Right Reserved</p>
-  </div>
+      <p>© 2024 Jujuu x RAF | All Right Reserved</p>
+    </div>
 
-  <div style="display: none;" class="con-tampilkanLogo" id="modalLogo">
+    <div style="display: none;" class="con-tampilkanLogo" id="modalLogo">
 
-    <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
-      class="logo-ygdiperbesar">
-    <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
-  </div>
+      <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
+        class="logo-ygdiperbesar">
+      <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
+    </div>
 
 
-  <script>
+    <script>
 
-    function logoBesar() {
-      const modal = document.getElementById('modalLogo');
-      modal.style.display = 'flex'; // Tampilkan modal
-    }
+      function logoBesar() {
+        const modal = document.getElementById('modalLogo');
+        modal.style.display = 'flex'; // Tampilkan modal
+      }
 
-    // Menyembunyikan modal
-    function tutupLogo() {
-      const modal = document.getElementById('modalLogo');
-      modal.style.display = 'none'; // Sembunyikan modal
-    };
+      // Menyembunyikan modal
+      function tutupLogo() {
+        const modal = document.getElementById('modalLogo');
+        modal.style.display = 'none'; // Sembunyikan modal
+      };
 
-    function typingEffect() {
-      const contactTexts = shuffleArray(['Hello, I am jujuuxraf',
-        'Link to my social media account 👇',
-        'Dont forget to follow😉']);
-      const typedtext = document.getElementsByClassName("typedtext")[0];
-      let removing = false;
-      let idx = char = 0;
+      function typingEffect() {
+        const contactTexts = shuffleArray(['Hello, I am jujuuxraf',
+          'Link to my social media account 👇',
+          'Dont forget to follow😉']);
+        const typedtext = document.getElementsByClassName("typedtext")[0];
+        let removing = false;
+        let idx = char = 0;
 
-      setInterval(() => { // We define the interval of the typing speed
+        setInterval(() => { // We define the interval of the typing speed
 
-        // If we do not reach the limit, we insert characters in the html
-        if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
+          // If we do not reach the limit, we insert characters in the html
+          if (char < contactTexts[idx].length) typedtext.innerHTML += contactTexts[idx][char];
 
-        // 15*150ms = time before starting to remove characters
-        if (char == contactTexts[idx].length + 15) removing = true;
+          // 15*150ms = time before starting to remove characters
+          if (char == contactTexts[idx].length + 15) removing = true;
 
-        // Removing characters, the last one always
-        if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(0, typedtext.innerHTML.length - 1);
+          // Removing characters, the last one always
+          if (removing) typedtext.innerHTML = typedtext.innerHTML.substring(0, typedtext.innerHTML.length - 1);
 
-        char++; // Next character
+          char++; // Next character
 
-        // When there is nothing else to remove
-        if (typedtext.innerHTML.length === 0) {
+          // When there is nothing else to remove
+          if (typedtext.innerHTML.length === 0) {
 
-          // If we get to the end of the texts we start over
-          if (idx === contactTexts.length - 1) idx = 0
-          else idx++;
+            // If we get to the end of the texts we start over
+            if (idx === contactTexts.length - 1) idx = 0
+            else idx++;
 
-          char = 0; // Start the next text by the first character
-          removing = false; // No more removing characters
+            char = 0; // Start the next text by the first character
+            removing = false; // No more removing characters
+          }
+
+        }, 150); // Typing speed, 150 ms
+
+      }
+      typingEffect();
+      function shuffleArray(array) {
+        let currentIndex = array.length,
+          temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
         }
 
-      }, 150); // Typing speed, 150 ms
-
-    }
-    typingEffect();
-    function shuffleArray(array) {
-      let currentIndex = array.length,
-        temporaryValue, randomIndex;
-
-      // While there remain elements to shuffle...
-      while (0 !== currentIndex) {
-
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        return array;
       }
 
-      return array;
-    }
+      let lastScrollTop = 0; // Posisi scroll sebelumnya
+      const header = document.getElementById('header');
 
-    let lastScrollTop = 0; // Posisi scroll sebelumnya
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset; // Posisi scroll saat ini
-      if (currentScroll > lastScrollTop) {
-        // Scroll ke bawah
-        header.classList.add('hidden');
-      } else {
-        // Scroll ke atas
-        header.classList.remove('hidden');
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pastikan nilai tidak negatif
-    });
-
-
-    function createSnowflake() {
-      const snowflake = document.createElement('div');
-      snowflake.classList.add('snowflake');
-      snowflake.textContent = '•';
-      snowflake.style.fontSize = Math.random() * 24 + 10 + 'px';
-      snowflake.style.left = Math.random() * window.innerWidth + 'px';
-      snowflake.style.animation = `fall ${Math.random() * 4 + 4}s linear infinite, sideWays ${Math.random() * 2 + 1}s ease-in-out infinite`;
-
-      document.body.appendChild(snowflake);
-
-      setTimeout(() => {
-        snowflake.remove();
-      }, Math.random() * 4000 + 4000);
-    }
-
-    document.styleSheets[0].insertRule('@keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }', document.styleSheets[0].cssRules.length);
-    document.styleSheets[0].insertRule('@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }', document.styleSheets[0].cssRules.length);
-
-    setInterval(createSnowflake, 200);
-
-    (() => {
-
-      const cursor = document.querySelector('.cursor');
-
-      document.addEventListener('mousemove', e => {
-        cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset; // Posisi scroll saat ini
+        if (currentScroll > lastScrollTop) {
+          // Scroll ke bawah
+          header.classList.add('hidden');
+        } else {
+          // Scroll ke atas
+          header.classList.remove('hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pastikan nilai tidak negatif
       });
 
-      document.addEventListener('click', () => {
-        console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
 
-        cursor.classList.add('cursor--expand');
-        console.log(cursor.classList);
+      function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '•';
+        snowflake.style.fontSize = Math.random() * 24 + 10 + 'px';
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        snowflake.style.animation = `fall ${Math.random() * 4 + 4}s linear infinite, sideWays ${Math.random() * 2 + 1}s ease-in-out infinite`;
+
+        document.body.appendChild(snowflake);
 
         setTimeout(() => {
-          cursor.classList.remove('cursor--expand');
-        }, 500);
-      });
-    })();
+          snowflake.remove();
+        }, Math.random() * 4000 + 4000);
+      }
 
-  </script>
+      document.styleSheets[0].insertRule('@keyframes fall { 0% { top: -50px; } 100% { top: 100vh; } }', document.styleSheets[0].cssRules.length);
+      document.styleSheets[0].insertRule('@keyframes sideWays { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(20px); } }', document.styleSheets[0].cssRules.length);
+
+      setInterval(createSnowflake, 200);
+
+      (() => {
+
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+          cursor.setAttribute('style', `top:  ${e.pageY - 25}px; left: ${e.pageX - 25}px;`);
+        });
+
+        document.addEventListener('click', () => {
+          console.log("%c Click...!!!", "font-size: 20px; color:mediumspringgreen;");
+
+          cursor.classList.add('cursor--expand');
+          console.log(cursor.classList);
+
+          setTimeout(() => {
+            cursor.classList.remove('cursor--expand');
+          }, 500);
+        });
+      })();
+
+    </script>
   </div>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
