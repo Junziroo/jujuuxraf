@@ -87,9 +87,10 @@
     }
 
     .nav-links:hover {
-      color: #00cc4b;
-      text-shadow: 0 0px 5px #00cc4b,
-        0 0px 20px #00cc4b;
+      color: #ffffff;
+      text-shadow: 0 0px 5px #ffffff,
+        0 0px 20px #ffffff,
+        0 0px 30px #ffffff;
     }
 
     .container {
@@ -159,6 +160,8 @@
     }
 
     .btn-whatsapp {
+      position: relative;
+      overflow: hidden;
       background: #00cc4b;
       display: flex;
       align-items: center;
@@ -170,12 +173,7 @@
       border-radius: 5px;
       margin-bottom: 20px;
       cursor: pointer;
-    }
-
-    .btn-whatsapp img {
-      width: 70px;
-      height: 70px;
-      margin-left: 10px;
+      transition: all 0.3s ease;
     }
 
     .sosmed {
@@ -214,7 +212,10 @@
 
     .fa-whatsapp {
       margin-left: 8px;
+      position: absolute;
+      right: -50px;
     }
+
 
     .snowflake {
       position: fixed;
@@ -257,13 +258,18 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      background: red;
-      color: white;
+      color: rgb(255, 0, 0);
+      background: none;
       border: none;
       border-radius: 5px;
-      padding: 10px 15px;
-      font-size: 16px;
+      padding: 10px;
       cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .tutupgambar i {
+      font-size: 2em;
     }
 
     .cursor {
@@ -415,6 +421,10 @@
         color: #00cc4b;
       }
 
+      .btn-whatsapp:hover .fa-whatsapp {
+      right: 20px;
+    }
+
       .con-logo:hover h1 {
         text-shadow: 0 0px 5px #ffffff,
           0 0px 20px #ffffff;
@@ -464,12 +474,6 @@
         font-size: 1.2em;
       }
 
-      .btn-whatsapp img {
-        width: 50px;
-        height: 50px;
-        margin-left: 10px;
-      }
-
       .title-sosmed {
         font-size: 1em;
       }
@@ -509,6 +513,10 @@
         background: white;
         color: #00cc4b;
       }
+
+      .btn-whatsapp:active .fa-whatsapp {
+      right: 20px;
+    }
 
       .con-logo:active h1 {
         text-shadow: 0 0px 5px #ffffff,
@@ -797,7 +805,8 @@ flex-direction: column;" class="container-sosialmedia" id="sosmed">
           onclick="logoBesar()">
         <p class="title">Jujuu x RAF</p>
 
-        <a href="https://wa.me/6285773153585" class="btn-whatsapp">Chat me on
+        <a href="https://wa.me/6285773153585" class="btn-whatsapp">
+          Chat me on
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
@@ -854,7 +863,9 @@ flex-direction: column;" class="container-sosialmedia" id="sosmed">
 
       <img src="https://i.pinimg.com/originals/02/72/35/02723528ae01d17bbf67ccf6b8da8a6b.jpg" alt="Logo besar"
         class="logo-ygdiperbesar">
-      <button class="tutupgambar" onclick="tutupLogo()">Tutup</button>
+      <button class="tutupgambar" onclick="tutupLogo()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
 
 
